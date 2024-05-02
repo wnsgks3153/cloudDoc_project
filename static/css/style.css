@@ -1,0 +1,118 @@
+/* 기본 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px; /* 변경된 헤더의 패딩 값 */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2em;
+    color: #191970;
+    pointer-events: none;
+    margin-right: 20px; /* 변경된 로고의 마진 값 */
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #191970;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 0 5px; 
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    background: #191970;
+    color: #fff;
+}
+
+.parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-attachment: fixed; /* 배경 이미지를 스크롤에 따라 고정하지 않고 움직이게 설정 */
+}
+
+#text {
+    position: absolute;
+    font-size: 5em;
+    color: #191970;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2)
+}
+
+.parallax img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec {
+    position: relative;
+    background: white;
+    padding: 50px; /* 변경된 섹션의 패딩 값 */
+}
+
+.sec h2 {
+    font-size: 3em; /* 변경된 섹션 제목의 폰트 사이즈 */
+    color: black;
+    margin-bottom: 10px; /* 변경된 섹션 제목의 마진 값 */
+}
+
+.sec p {
+    font-size: 1em;
+    color: black;
+    font-weight: 300;
+}
+
+/* 반응형 웹 */
+/* 미디어 쿼리를 사용하여 화면 크기가 작을 때 스타일 변경 */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px; /* 작은 화면일 때 변경된 헤더의 패딩 값 */
+    }
+
+    .logo {
+        font-size: 1.5em; /* 작은 화면일 때 변경된 로고의 폰트 사이즈 */
+    }
+
+    .navigation a {
+        padding: 8px; /* 작은 화면일 때 변경된 네비게이션 아이템의 패딩 값 */
+        margin: 0 3px; /* 작은 화면일 때 변경된 네비게이션 아이템의 마진 값 */
+    }
+
+    .parallax {
+        height: 80vh; /* 작은 화면일 때 변경된 패럴랙스 섹션의 높이 값 */
+    }
+
+    .sec {
+        padding: 30px; /* 작은 화면일 때 변경된 섹션의 패딩 값 */
+    }
+
+    .sec h2 {
+        font-size: 1.5em; /* 작은 화면일 때 변경된 섹션 제목의 폰트 사이즈 */
+        margin-bottom: 30px; /* 작은 화면일 때 변경된 섹션 제목의 마진 값 */
+    }
+}
